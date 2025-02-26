@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
+  get "homes/index"
   devise_for :users, controllers: {
   # UserのSessionsControllerには、Users::SessionsControllerを利用する。他のコントローラーも同じように修正する。
-  sessions:      'users/sessions',
-  passwords:     'users/passwords',
-  registrations: 'users/registrations'
+  sessions:      "users/sessions",
+  passwords:     "users/passwords",
+  registrations: "users/registrations"
 }
 devise_for :admins, controllers: {
   # AdminのSessionsControllerには、Admins::SessionsControllerを利用する。他のコントローラーも同じように修正する。
-  sessions:      'admins/sessions',
-  passwords:     'admins/passwords',
-  registrations: 'admins/registrations'
+  sessions:      "admins/sessions",
+  passwords:     "admins/passwords",
+  registrations: "admins/registrations"
 }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -23,4 +24,6 @@ devise_for :admins, controllers: {
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  root "homes#index"
 end
