@@ -58,6 +58,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "tailwindcss-rails", "~> 4.1"
+gem "tailwindcss-rails"
 gem "devise"
 gem "devise-i18n"
