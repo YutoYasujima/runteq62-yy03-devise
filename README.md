@@ -1,24 +1,9 @@
-# README
+## 参考URL
+- https://nekorails.hatenablog.com/entry/2021/03/18/110200#%E7%92%B0%E5%A2%83
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 初期設定
+```
+docker compose build
+docker compose run --rm web bundle install
+docker compose run --rm web yarn install
+```

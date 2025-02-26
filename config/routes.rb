@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+  # UserのSessionsControllerには、Users::SessionsControllerを利用する。他のコントローラーも同じように修正する。
+  sessions:      'users/sessions',
+  passwords:     'users/passwords',
+  registrations: 'users/registrations'
+}
+devise_for :admins, controllers: {
+  # AdminのSessionsControllerには、Admins::SessionsControllerを利用する。他のコントローラーも同じように修正する。
+  sessions:      'admins/sessions',
+  passwords:     'admins/passwords',
+  registrations: 'admins/registrations'
+}
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
