@@ -63,3 +63,5 @@ gem "tailwindcss-rails"
 gem "devise"
 gem "devise-i18n"
 gem 'dotenv-rails'
+gem 'omniauth-line'
+gem 'omniauth-rails_csrf_protection'

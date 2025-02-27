@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     # UserのSessionsControllerには、Users::SessionsControllerを利用する。他のコントローラーも同じように修正する。
     sessions:      "users/sessions",
     passwords:     "users/passwords",
-    registrations: "users/registrations"
+    registrations: "users/registrations",
+    omniauth_callbacks: "users/omniauth_callbacks"
   }
 devise_for :admins, controllers: {
     # AdminのSessionsControllerには、Admins::SessionsControllerを利用する。他のコントローラーも同じように修正する。
